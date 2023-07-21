@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EventsWeek</title>
+</head>
+<body>
+  <main class="container my-5">
+    <div class="row mb-4">
+      <div class="btn-group col" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-primary btn-sm" id="prev">&#60;</button>
+        <button type="button" class="btn btn-primary btn-sm" id="next">&#62;</button>
+      </div>
+      <h2 class="col-sm-8 text-center" id="title">Jul 16 - 22, 2023</h2>
+      <div class="btn-group col" role="group" aria-label="Basic radio toggle button group">
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio-month" autocomplete="off">
+        <label class="btn btn-outline-primary" for="btnradio-month">Month</label>
+      
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio-week" autocomplete="off" checked>
+        <label class="btn btn-outline-primary" for="btnradio-week">Week</label>
+      
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio-day" autocomplete="off">
+        <label class="btn btn-outline-primary" for="btnradio-day">Day</label>
+      </div>
+    </div>
+    <table class="table table-light table-bordered table-sm text-center align-middle" data-arr='[
+      {"date": "2023/07/11", "timeStart": "10:30am", "timeEnd": "12:30pm", "color": "green", "title": "Пробежка"},
+      {"date": "2023/07/23", "timeStart": "3:30pm", "timeEnd": "4:00pm", "color": "blue", "title": "Стоматолог"},
+      {"date": "2023/07/20", "timeStart": "4:00pm", "timeEnd": "6:00pm", "color": "lightseagreen", "title": "Техническое собеседование"},
+      {"date": "2023/07/24", "timeStart": "5:00pm", "timeEnd": "5:30pm", "color": "cornflowerblue", "title": "Дедлайн по тестовому"},
+      {"date": "2023/07/12", "timeStart": "6:00pm", "timeEnd": "7:30pm", "color": "aqua", "title": "Урок танцев"},
+      {"date": "2023/07/16", "timeStart": "11:00am", "timeEnd": "12:30pm", "color": "blueviolet", "title": "Урок английского"},
+      {"date": "2023/07/14", "timeStart": "2:00pm", "timeEnd": "4:00pm", "color": "darkslategray", "title": "Техническое собеседование"},
+      {"date": "2023/07/19", "timeStart": "1:30pm", "timeEnd": "3:00pm", "color": "cadetblue", "title": "Встреча в кафе"},
+      {"date": "2023/06/30", "timeStart": "8:00pm", "timeEnd": "10:30pm", "color": "hotpink", "title": "Поход в кино"},
+      {"date": "2023/08/06", "timeStart": "9:00am", "timeEnd": "4:30pm", "color": "greenyellow", "title": "Шопинг"},
+      {"date": "2023/07/30", "timeStart": "all-day", "timeEnd": "all-day", "color": "coral", "title": "День рождения"},
+      {"date": "2023/08/04", "timeStart": "12:00pm", "timeEnd": "2:00pm", "color": "indianred", "title": "Техническое собеседование"}
+    ]'>
+      <thead>
+        <tr class="table-secondary">
+          <th scope="col" class="block-th"></th>
+          <th scope="col" class="h6 title-col block-th">Sun 7/16</th>
+          <th scope="col" class="h6 title-col block-th">Mon 7/17</th>
+          <th scope="col" class="h6 title-col block-th">Tue 7/18</th>
+          <th scope="col" class="h6 title-col block-th">Wed 7/19</th>
+          <th scope="col" class="h6 title-col block-th">Thu 7/20</th>
+          <th scope="col" class="h6 title-col block-th">Fri 7/21</th>
+          <th scope="col" class="h6 title-col block-th">Sat 7/22</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="all-day">
+          <th scope="row" class="table-light h6">all-day</th>
+        </tr>
+        <tr id="12:00am">
+          <th scope="row" class="h6" rowspan="2">12am</th>
+        </tr>
+        <tr id="12:30am">
+        </tr>
+        <tr id="1:00am">
+          <th scope="row" class="h6" rowspan="2">1am</th>
+        </tr>
+        <tr id="1:30am">
+        </tr>
+        <tr id="2:00am">
+          <th scope="row" class="h6" rowspan="2">2am</th>
+        </tr>
+        <tr id="2:30am">
+        </tr>
+        <tr id="3:00am">
+          <th scope="row" class="h6" rowspan="2">3am</th>
+        </tr>
+        <tr id="3:30am">
+        </tr>
+        <tr id="4:00am">
+          <th scope="row" class="h6" rowspan="2">4am</th>
+        </tr>
+        <tr id="4:30am">
+        </tr>
+        <tr id="5:00am">
+          <th scope="row" class="h6" rowspan="2">5am</th>
+        </tr>
+        <tr id="5:30am">
+        </tr>
+        <tr id="6:00am">
+          <th scope="row" class="h6" rowspan="2">6am</th>
+        </tr>
+        <tr id="6:30am">
+        </tr>
+        <tr id="7:00am">
+          <th scope="row" class="h6" rowspan="2">7am</th>
+        </tr>
+        <tr id="7:30am">
+        </tr>
+        <tr id="8:00am">
+          <th scope="row" class="h6" rowspan="2">8am</th>
+        </tr>
+        <tr id="8:30am">
+        </tr>
+        <tr id="9:00am">
+          <th scope="row" class="h6" rowspan="2">9am</th>
+        </tr>
+        <tr id="9:30am">
+        </tr>
+        <tr id="10:00am">
+          <th scope="row" class="h6" rowspan="2">10am</th>
+        </tr>
+        <tr id="10:30am">
+        </tr>
+        <tr id="11:00am">
+          <th scope="row" class="h6" rowspan="2">11am</th>
+        </tr>
+        <tr id="11:30am">
+        </tr>
+        <tr id="12:00pm">
+          <th scope="row" class="h6" rowspan="2">12pm</th>
+        </tr>
+        <tr id="12:30pm">
+        </tr>
+        <tr id="1:00pm">
+          <th scope="row" class="h6" rowspan="2">1pm</th>
+        </tr>
+        <tr id="1:30pm">
+        </tr>
+        <tr id="2:00pm">
+          <th scope="row" class="h6" rowspan="2">2pm</th>
+        </tr>
+        <tr id="2:30pm">
+        </tr>
+        <tr id="3:00pm">
+          <th scope="row" class="h6" rowspan="2">3pm</th>
+        </tr>
+        <tr id="3:30pm">
+        </tr>
+        <tr id="4:00pm">
+          <th scope="row" class="h6" rowspan="2">4pm</th>
+        </tr>
+        <tr id="4:30pm">
+        </tr>
+        <tr id="5:00pm">
+          <th scope="row" class="h6" rowspan="2">5pm</th>
+        </tr>
+        <tr id="5:30pm">
+        </tr>
+        <tr id="6:00pm">
+          <th scope="row" class="h6" rowspan="2">6pm</th>
+        </tr>
+        <tr id="6:30pm">
+        </tr>
+        <tr id="7:00pm">
+          <th scope="row" class="h6" rowspan="2">7pm</th>
+        </tr>
+        <tr id="7:30pm">
+        </tr>
+        <tr id="8:00pm">
+          <th scope="row" class="h6" rowspan="2">8pm</th>
+        </tr>
+        <tr id="8:30pm">
+        </tr>
+        <tr id="9:00pm">
+          <th scope="row" class="h6" rowspan="2">9pm</th>
+        </tr>
+        <tr id="9:30pm">
+        </tr>
+        <tr id="10:00pm">
+          <th scope="row" class="h6" rowspan="2">10pm</th>
+        </tr>
+        <tr id="10:30pm">
+        </tr>
+        <tr id="11:00pm">
+          <th scope="row" class="h6" rowspan="2">11pm</th>
+        </tr>
+        <tr id="11:30pm">
+        </tr>
+      </tbody>
+    </table>
+  </main>
+  <div class="loader">
+    <div class="spinner-border text-secondary" role="status">
+      <span class="visually-hidden">Загрузка...</span>
+    </div>
+  </div>
+</body>
