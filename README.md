@@ -4,7 +4,7 @@
 В проекте используются технологии: 
 
 * HTML
-* SCSS
+* Sass
 * Bootstrap
 * JavaScript
 * Webpack
